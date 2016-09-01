@@ -1,0 +1,21 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+    "EFCore.Data": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "net46": {
+    },
+    "netstandard1.3": {
+      "imports": "netcore50",
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    }
+  }
+}

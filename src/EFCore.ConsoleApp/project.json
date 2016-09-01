@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
@@ -12,7 +12,10 @@
     "EFCore.Data": {
       "target": "project"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0"
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+    "EFCore.Common": {
+      "target": "project"
+    }
   },
 
   "frameworks": {
