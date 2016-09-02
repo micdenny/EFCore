@@ -12,7 +12,8 @@ namespace EFCore.Common
             {
                 db.Blogs.Add(new Blog
                 {
-                    Url = "http://blogs.msdn.com/adonet"
+                    Url = "http://blogs.msdn.com/adonet",
+                    Description = "ADO.NET Blog"
                 });
                 var count = await db.SaveChangesAsync();
                 Console.WriteLine($"{count} records saved to database.");
@@ -21,7 +22,7 @@ namespace EFCore.Common
                 Console.WriteLine("All blogs in database:");
                 foreach (var blog in db.Blogs)
                 {
-                    Console.WriteLine($" - [id:{blog.BlogId}] {blog.Url}");
+                    Console.WriteLine($" - [id:{blog.BlogId}] {blog.Url} - {blog.Description}");
                 }
             }
         }
