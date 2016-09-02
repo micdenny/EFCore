@@ -11,5 +11,12 @@ namespace EFCore.Data
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>()
+                        .Property(b => b.Url)
+                        .IsRequired();
+        }
     }
 }
